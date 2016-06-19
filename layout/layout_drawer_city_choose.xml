@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_province"
+        android:layout_width="match_parent"
+        android:paddingLeft="3dp"
+        android:drawablePadding="5dp"
+        android:layout_height="40dp"
+        android:layout_margin="7dp"
+        android:textSize="14sp"
+        android:background="@drawable/shape_edit_choose_city"
+        android:hint="输入省份名称查询"
+        android:drawableLeft="@mipmap/ic_search_api_holo_light"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_pull_city"
+        android:listSelector="@android:color/transparent"
+        android:visibility="gone"
+        ></ListView>
+    <include layout="@layout/view_cut_line"/>
+    <com.yangsheng.ydzd_lb.androidpnpro.MyScrollView
+        android:id="@+id/scroll_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门地区"
+                android:layout_marginLeft="5dp"
+                />
+            <com.yangsheng.ydzd_lb.androidpnpro.MyGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gv_hop_city"
+                android:numColumns="3"
+                android:listSelector="@android:color/transparent"
+                ></com.yangsheng.ydzd_lb.androidpnpro.MyGridView>
+           <include layout="@layout/view_cut_line"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部省份"
+                android:layout_marginLeft="5dp"
+                />
+            <com.yangsheng.ydzd_lb.androidpnpro.MyScrollViewListView
+                android:divider="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_all_city"
+                android:listSelector="@android:color/transparent"
+                ></com.yangsheng.ydzd_lb.androidpnpro.MyScrollViewListView>
+        </LinearLayout>
+    </com.yangsheng.ydzd_lb.androidpnpro.MyScrollView>
+
+</LinearLayout>
